@@ -28,7 +28,7 @@ for plano in names:
         plano[1] = plano[1] * 0.9
         print("O novo valor é: ", plano[1])
 
-serial: int = input("\nDigite o código do plano para remover da nossa lista: ")
+serial=int(input("\nDigite o código do plano para remover da nossa lista: "))
 for plano in names:
     if plano[2]==serial:
         names.remove(plano)
@@ -44,5 +44,5 @@ for plano in names:
     valores.append(plano[1])
     if len(valores) > 0:
         print("Plano de saúde mais caro", max(valores))
-        print("Plano de saúde mais caro", min(valores))
-        print("Plano de saúde mais caro", sum(valores))
+        print("Plano de saúde mais barato", min(valores))
+        print("Soma de mensalidades", sum(valores))
