@@ -1,4 +1,4 @@
-def preencherInventario (lista):
+def preencherInventario(lista):
     resp="S"
     while resp == "S":
         equipamento =[input("Equipamento: "),
