@@ -8,4 +8,16 @@ def perguntar():
 def inserir(dicionario):
    dicionario[input("Digite o login: ").upper()] = [input("Digite o nome").upper(),
                                                       input("Digite a ultima data de acesso"),
-                                                      input("Qual a última estação acessada: ").upper()]
+                                   input("Qual a última estação acessada: ").upper()]
+
+
+def pesquisar():{
+
+}
+def excluir():{
+
+}
+
+def listar():{
+
+}
