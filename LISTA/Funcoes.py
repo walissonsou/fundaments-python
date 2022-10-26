@@ -15,16 +15,14 @@ def pesquisar(dicionario):
         if elemento.get("busca"):
             print("Nome", elemento[0])
             print("Ultimo acesso", elemento[1])
-#
 
 def listar(dicionario):
         print(dicionario)
 
 def excluir(dicionario):
-    excluir: str =input("\n Digite o o usuário que você quer excluir de acordo com o login: ")
-    for elemento in dicionario:
-      for key, value in elemento.items():
-        if value == excluir:
-          dicionario.remove(elemento)
-          print("Usuário {} excluído.".format(excluir))
-
+    excluir=input("\n Digite o o usuário que você quer excluir de acordo com o login: ").upper()
+    for elemento in dicionario.copy():
+      if excluir in elemento:
+        dicionario.pop(excluir)
+        print("Usuário {} excluído.".format(excluir))
+    print(dicionario)
