@@ -11,10 +11,9 @@ def inserir(dicionario):
                                                     input("Qual a última estação acessada: ").upper()]
 def pesquisar(dicionario):
     busca = input("\n Digite o o usuário que você quer pesquisar de acordo com o login: ")
-    for elemento in dicionario:
-        if elemento.get("busca"):
-            print("Nome", elemento[0])
-            print("Ultimo acesso", elemento[1])
+    for elemento in dicionario.copy():
+        if busca in elemento:
+            print(dicionario[busca])
 
 def listar(dicionario):
         print(dicionario)
@@ -23,6 +22,6 @@ def excluir(dicionario):
     excluir=input("\n Digite o o usuário que você quer excluir de acordo com o login: ").upper()
     for elemento in dicionario.copy():
       if excluir in elemento:
-        dicionario.pop(excluir)
+        del dicionario[excluir]
         print("Usuário {} excluído.".format(excluir))
     print(dicionario)

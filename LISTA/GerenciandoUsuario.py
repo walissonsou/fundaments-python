@@ -11,7 +11,7 @@ while opcao == "I" or opcao == "P" or opcao == "E" or opcao == "L" or opcao =="P
     if opcao == "I":
         inserir(usuarios)
     if opcao == "P":
-        print("Jaja eu faço")
+        pesquisar(usuarios)
     if opcao == "E":
         excluir(usuarios)
     if opcao == "L":
