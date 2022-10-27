@@ -25,3 +25,6 @@ def excluir(dicionario):
         del dicionario[excluir]
         print("Usuário {} excluído.".format(excluir))
     print(dicionario)
+
+
+
