@@ -9,6 +9,8 @@ def inserir(dicionario):
    dicionario[input("Digite o login: ").upper()] = [input("Digite o nome").upper(),
                                                     input("Digite a ultima data de acesso"),
                                                     input("Qual a última estação acessada: ").upper()]
+
+   salvar(dicionario)
 def pesquisar(dicionario):
     busca = input("\n Digite o o usuário que você quer pesquisar de acordo com o login: ")
     for elemento in dicionario.copy():
@@ -25,6 +27,12 @@ def excluir(dicionario):
         del dicionario[excluir]
         print("Usuário {} excluído.".format(excluir))
     print(dicionario)
+
+
+def salvar(dicionario):
+    with open("bd.txt", "a") as arquivo:
+        for chave, valor in dicionario.items():
+            arquivo.write(chave + ":" + str(valor))
 
 
 
