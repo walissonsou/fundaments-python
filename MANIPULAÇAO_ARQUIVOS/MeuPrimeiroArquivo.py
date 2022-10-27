@@ -1,5 +1,3 @@
-with open("primeiro_arquivo.txt", "r") as arquivo:
-    for linha in arquivo.readlines():
-        print(linha)
+with open("primeiro_arquivo.txt", "a") as arquivo:
+    arquivo.write("\nHakunaa matata")
 
-# A, W, X, R, WR
