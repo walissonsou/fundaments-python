@@ -34,23 +34,6 @@ def excluir(dicionario):
     except:
         print("Oops! someting error")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def salvar(dicionario):
     with open("bd.txt", "a") as arquivo:
         for chave, valor in dicionario.items():
