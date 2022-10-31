@@ -50,9 +50,10 @@ print('Fim')
 #  Faça um Programa que leia três números e mostre o maior deles.
 listanum = []
 maior = 0
-menor = 0
+menor = 1000000
 for posicao in range(0,3):
     listanum.append(float(input('Digite a um numero para posição {}: '.format(posicao+1))))
+    print(listanum)
     if posicao == 0:
         maior = menor = listanum[posicao]
     else:
