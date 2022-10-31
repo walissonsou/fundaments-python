@@ -21,7 +21,21 @@ temperaturec = float(input("Digite a temperatura que você quer transformar em F
 calcc = temperaturec * 1.8 + 32
 print('A temperatura em Celsius é {:.2f}'.format(calcc))
 # Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+num1 = int(input("Digite um número inteiro: "))
+num2 = int(input("Digite outro número inteiro: "))
+real1 = float(input("Digite outro número real: "))
 # o produto do dobro do primeiro com metade do segundo .
+calc1 = (num1*2) * (num2/2)
+print(calc1)
 # a soma do triplo do primeiro com o terceiro.
+calc2 = num2*3 + real1
+print(calc2)
 # o terceiro elevado ao cubo.
-# Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula: (72.7*altura) - 58
+calc3 = real1**3
+print(calc3)
+# Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal,
+# usando a seguinte fórmula: (72.7*altura) - 58
+
+altura = float(input("Qual a sua altura? "))
+pesoIdeal = (72.7 * altura) - 58
+print('Seu peso ideal é {}'.format(pesoIdeal))
