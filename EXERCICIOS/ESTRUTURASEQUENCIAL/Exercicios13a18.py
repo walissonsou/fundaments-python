@@ -87,7 +87,7 @@ print('Você precisará de {} baldes grandes ou {} baldes pequenos'.format(qtddD
 precoBaldeG = qtddDeBaldeG * 80
 precoBaldeP = qtdDeBaldeP * 25
 print('Se optar pelo balde G, você desembolsará R${:.2f}'.format(precoBaldeG))
-print('Se optar pelo balde G, você desembolsará R${:.2f}'.format(precoBaldeP))
+print('Se optar pelo balde P, você desembolsará R${:.2f}'.format(precoBaldeP))
 compra: str = input('Digite G para comprar {} baldes grande, ou P para comprar {} baldes pequenos: '.format(qtddDeBaldeG, qtdDeBaldeP)).upper()
 if compra == 'G':
     print('Ok, você desembolsará R${:.2f}'.format(precoBaldeG))
