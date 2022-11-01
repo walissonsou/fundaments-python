@@ -36,3 +36,4 @@ pop -> Pilha, lei de quem chega primeiro sai primeiro, remove o ultimo elemento.
 
 
                     ## Tuplas -> são listas IMUTÁVEIS
+
