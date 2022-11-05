@@ -80,16 +80,24 @@ numerodealunos = int(input("Informe o numero de alunos que deseja cadastrar: "))
 listadealunos = []
 
 def cadastrar_notas(nome,nota1,nota2,nota3,nota4):
-    for i in range(0, numerodealunos):
         cadastro ={"nome": nome, "nota1": nota1,"nota2": nota2, "nota3": nota3, "nota4": nota4}
         listadealunos.append(cadastro)
+for i in range(numerodealunos):
+    nome = input(f"Digite seu nome completo {i+1}:  ").strip()
+    nota1_flag = False
+    while nota1_flag == False:
+        try:
+            nota1 = int(input("Digite a primeira nota do aluno {}: "))
+            nota1_flag = True
+            continue
+        except:
+            print("Valor inválido! Digite novamente!")
+            nota1_flag == False
+    nota2 = float(input("Digite sua nota 2 : "))
+    nota3 = float(input("Digite sua nota 3 : "))
+    nota4 = float(input("Digite sua nota 4 : "))
 
-nome = input("Digite seu nome: ")
-nota1 = float(input("Digite sua nota: "))
-nota2 = float(input("Digite sua nota: "))
-nota3 = float(input("Digite sua nota: "))
-nota4 = float(input("Digite sua nota: "))
-
-
-cadastrar_notas(nome,nota1,nota2,nota3,nota4)
-print(listadealunos)
+    cadastrar_notas(nome,nota1,nota2,nota3,nota4)
+for alunos in listadealunos:
+    media = alunos['nota1'] + alunos['nota2'] + alunos['nota3'] + alunos['nota4'] / 4
+    print(alunos['nome'], media)
