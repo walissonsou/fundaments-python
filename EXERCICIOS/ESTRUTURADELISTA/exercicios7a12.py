@@ -1,6 +1,4 @@
 import numpy
-
-
 # Onde armazeno meus numeros
 numeros = []
 # Onde está no loop
@@ -34,9 +32,39 @@ print(multi)
 ## com biblioteca
 result1 = numpy.prod(numeros)
 print("Multiplicação: " + str(result1))
-
+print('Fim')
 # 8 Faça um Programa que peça a idade e a altura de 5 pessoas, armazene cada
 # informação no seu respectivo vetor. Imprima a idade e a altura na ordem inversa a ordem lida.
+
+listaidade = []
+listaaltura = []
+def cadastrar_idade(idade):
+    cadastroi = {'idade': idade}
+    listaidade.append(cadastroi)
+
+def cadastrar_altura(altura):
+    cadastroa = {'altura': altura}
+    listaaltura.append(cadastroa)
+
+for i in range(2):
+    idade = int(input("Digite sua idade: "))
+    altura = float(input("Digite a sua altura: "))
+    cadastrar_idade(idade)
+    cadastrar_altura(altura)
+
+print(listaaltura)
+print(listaidade)
+listaidade.reverse()
+print("reverse", listaidade)
+listaaltura.reverse()
+print("reverse", listaaltura)
+# OU
+print(listaidade[::-1])
+print(listaaltura[::-1])
+
+print("fim ")
+
+
 # 9 Faça um Programa que leia um vetor A com 10 números inteiros, calcule e
 # mostre a soma dos quadrados dos elementos do vetor.
 # 10 Faça um Programa que leia dois vetores com 10 elementos cada. Gere um
