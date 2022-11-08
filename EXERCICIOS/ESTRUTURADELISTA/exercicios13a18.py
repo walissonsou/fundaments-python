@@ -73,6 +73,7 @@ elif (soma_respostas == 5):
 # deve ser encerrado quando não for informado o nome do atleta .A saída do programa deve
 # ser conforme o exemplo abaixo:
 
+atletas = []
 
 while True:
     nome = input(
