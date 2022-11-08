@@ -2,10 +2,7 @@
 # em uma lista. Após isto, calcule a média anual das temperaturas e mostre todas
 # temperaturas acima da média anual,# e em que mês elas ocorreram
 # (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
-
-listadetemperatura = [{'JAN': 25 , 'FEV': 30, 'MAR': 12, 'ABRIL': 1.70}]
 temperatura = []
-lugar = []
 def cadastrar_temperaturas(jan,fev,mar,abr,maio,jun):
     cadastro = {'lugar': lugar, "jan": jan, "fev": fev, "mar": mar, 'abr': abr, "maio": maio, "jun": jun}
     temperatura.append(cadastro['jan'])
@@ -14,7 +11,6 @@ def cadastrar_temperaturas(jan,fev,mar,abr,maio,jun):
     temperatura.append(cadastro['abr'])
     temperatura.append(cadastro['maio'])
     temperatura.append(cadastro['jun'])
-    listadetemperatura.append(cadastro)
 
 lugar = input(f'Digite o nome do lugar: ').strip()
 jan = float(input('Digite a temperatura de janeiro: '))
@@ -26,5 +22,5 @@ jun = float(input('Digite a temperatura de junho: '))
 
 cadastrar_temperaturas(jan,fev,mar,abr,maio,jun)
 media = sum(temperatura) / len(temperatura)
-print(media)
-print(listadetemperatura)
+print(f'A média da cidade digitada é {media:.2f}')
+print(temperatura)
