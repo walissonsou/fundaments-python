@@ -152,3 +152,64 @@ for s in sistemas: ### [11, 7, 4, 6, 0, 0]
 print('----------------------------------')
 print('Total   %d' % sum(sistemas))
 print('O Sistema Operacional mais votado foi o %s, com %d votos, correspondendo a %.2f dos votos.' % (melhorSis, melhor, perc))
+
+print('Fim')
+# Faça um programa que leia um número indeterminado de valores, correspondentes a notas,
+# encerrando a entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado).
+# Após esta entrada de dados, faça:
+# Mostre a quantidade de valores que foram lidos;
+
+# Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+# Calcule e mostre a soma dos valores;st
+# # Calcule e more a média dos valores;
+# Calcule e mostre a quantidade de valores acima da média calculada;
+# Calcule e mostre a quantidade de valores abaixo de sete;
+# Encerre o programa com uma mensagem;
+
+nota_lida = 0
+notas_lidas = []
+notasacima = []
+notasabaixo = []
+while nota_lida >= 0 and nota_lida <= 10:
+    nota_lida = float(input('Digite a nota entre 0 a 10 ou -1 para encerrar: '))
+    if nota_lida == -1:
+        notas_lidas.append(nota_lida)
+
+# Mostre a quantidade de valores que foram lidos;
+tamanho = len(notas_lidas)
+print(' Quantidade de notas recebidas'.format(tamanho))
+# Exiba todos os valores na ordem em que foram informados, um ao lado do outro;
+for nota in notas_lidas:
+    print(nota, end=" - ")
+# Exiba todos os valores na ordem inversa à que foram informados, um abaixo do outro;
+notas_lidas.reverse()
+print('A ordem inversa da lista de notas é: {} \n' .format(notas_lidas))
+# Calcule e mostre a soma dos valores;st
+soma = sum(notas_lidas)
+print('A soma das notas é: {} \n'.format(soma))
+# # Calcule e more a média dos valores;
+media = soma / tamanho
+print('A média é: {:.2f} \n'.format(media))
+
+# Calcule e mostre a quantidade de valores acima da média calculada;
+for nota in notas_lidas:
+    if nota >= media:
+        notasacima.append(nota)
+    elif nota < 7:
+        notasabaixo.append(nota)
+print('Existem {} notas acima da média, e elas são: {} \n'.format(len(notasacima), notasacima))
+# Calcule e mostre a quantidade de valores abaixo de sete;
+print('Existem {} notas abaixo da média, e elas são: {} \n'.format(len(notasabaixo), notasabaixo))
+# Encerre o programa com uma mensagem;
+print('Fim')
+
+
+
+
+
+
+
+
+
+
+
