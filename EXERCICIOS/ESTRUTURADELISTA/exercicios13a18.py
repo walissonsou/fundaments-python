@@ -204,6 +204,55 @@ print('Existem {} notas abaixo da média, e elas são: {} \n'.format(len(notasab
 print('Fim')
 
 
+# Utilize uma lista para resolver o problema a seguir. Uma empresa paga seus vendedores com base em comissões. O vendedor recebe $200 por semana mais 9 por cento de suas vendas brutas daquela semana. Por exemplo, um vendedor que teve vendas brutas de $3000 em uma semana recebe $200 mais 9 por cento de $3000, ou seja, um total de $470. Escreva um programa (usando um array de contadores) que determine quantos vendedores receberam salários nos seguintes intervalos de valores:
+# $200 - $299
+# $300 - $399
+# $400 - $499
+# $500 - $599
+# $600 - $699
+# $700 - $799
+# $800 - $899
+# $900 - $999
+# $1000 em diante
+# Desafio: Crie ma fórmula para chegar na posição da lista a partir do salário, sem fazer vários ifs aninhados.
+# Abre o arquivo para leitura
+arquivo = open('usuarios.txt', 'r')
+
+# Coloca todas as linhas em memoria
+linhas = arquivo.readlines()
+
+# Fecha o arquivo
+arquivo.close()
+
+usuarios = []
+espacos = []
+total = 0
+for l in linhas:
+    linha = l.split()
+    usuarios.append(linha[0])
+    espacos.append(int(linha[1]))
+total = sum(espacos)
+
+# Abre o arquivo para escrita
+arquivoRelatorio = open('relatorio.txt', 'w')
+arquivoRelatorio.write(
+    'ACME Inc.               Uso do espaco em disco pelos usuarios\n')
+arquivoRelatorio.write(
+    '------------------------------------------------------------------------')
+arquivoRelatorio.write('\nNr.  Usuario        Espaco utilizado     %% do uso')
+
+for i in range(0, len(usuarios)):
+    espacoMB = espacos[i] / (1024.0 * 1024.0)
+    percentualUso = espacos[i] / total
+    arquivoRelatorio.write('\n%d - %s - %.2f MB - %.2f%%' %
+                       (i + 1, usuarios[i], espacoMB, percentualUso * 100.0))
+
+arquivoRelatorio.write('\nEspaco total ocupado: %.2f MB' %
+                   (total / (1024.0 * 1024.0)))
+arquivoRelatorio.write('\nEspaco medio ocupado: %.2f MB' %
+                   (total / len(usuarios) / (1024.0 * 1024.0)))
+# Fecha o arquivo
+arquivoRelatorio.close()
 
 
 
